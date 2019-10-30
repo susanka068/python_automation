@@ -13,7 +13,7 @@ def crowdsource():
   #sleep(1)
   upload =  d(className='android.widget.ImageButton',
                      packageName='com.google.android.apps.village.boond',
-                        resourceId='com.google.android.apps.village.boond:id/image_capture_button').click()
+                        resourceId='com.google.android.apps.village.boond:id/image_capture_button').click.wait()
 #upload a photo
   #sleep(1)
   photo =  d(className='android.widget.TextView',
@@ -25,7 +25,7 @@ def crowdsource():
   click =  d(className='android.widget.ImageView',
                      packageName='com.android.camera',
                         resourceId='com.android.camera:id/camera_shutter_middle_button'
-                        ).click()
+                        ).click.wait()
 
  #tap 'tick'
   tick =  d(className='android.view.View',
