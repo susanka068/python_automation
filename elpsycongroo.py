@@ -30,7 +30,7 @@ def crowdsource():
  #tap 'tick'
   tick =  d(className='android.view.View',
                      packageName='com.android.camera',
-                        resourceId='com.android.camera:id/save_btn').click()
+                        resourceId='com.android.camera:id/save_btn').click.wait()
  #goto selected file
  # selectedfile = d(className='android.widget.TextView',
                #      packageName='com.android.documentsui',
@@ -47,15 +47,15 @@ def crowdsource():
   write = d(className='android.widget.EditText',
                      packageName='com.google.android.apps.village.boond',
                         resourceId='com.google.android.apps.village.boond:id/edit_text_input' , 
-                        text =' Label key elements using commas, e.g., plant, vine, jasmine ').set_text("images")
+                        text =' Label key elements using commas, e.g., plant, vine, jasmine ').set_text("wall")
  #submit
-  sleep(3)
+ # sleep(3)
   submit = d(className='android.widget.Button',
                      packageName='com.google.android.apps.village.boond',
                         resourceId='com.google.android.apps.village.boond:id/submit_button',
-                        text = 'Upload' ).click()
+                        text = 'Upload' ).click.wait()
 #Call The main Method
-n = 1
+n = 2
 for i in range(n):
     crowdsource()
 
