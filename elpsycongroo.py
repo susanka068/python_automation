@@ -13,19 +13,19 @@ def crowdsource():
   #sleep(1)
   upload =  d(className='android.widget.ImageButton',
                      packageName='com.google.android.apps.village.boond',
-                        resourceId='com.google.android.apps.village.boond:id/image_capture_button').click.wait()
+                        resourceId='com.google.android.apps.village.boond:id/image_capture_button').click()
 #upload a photo
   #sleep(1)
   photo =  d(className='android.widget.TextView',
                      packageName='com.google.android.apps.village.boond',
                      text = 'Take a photo'
-                       ).click()
+                       ).click.wait()
   #click a photo 
   #sleep(1)
   click =  d(className='android.widget.ImageView',
                      packageName='com.android.camera',
                         resourceId='com.android.camera:id/camera_shutter_middle_button'
-                        ).click.wait()
+                        ).click()
 
  #tap 'tick'
   tick =  d(className='android.view.View',
@@ -47,17 +47,18 @@ def crowdsource():
   write = d(className='android.widget.EditText',
                      packageName='com.google.android.apps.village.boond',
                         resourceId='com.google.android.apps.village.boond:id/edit_text_input' , 
-                        text =' Label key elements using commas, e.g., plant, vine, jasmine ').set_text("wall")
+                        text =' Label key elements using commas, e.g., plant, vine, jasmine ').set_text("room-")
  #submit
- # sleep(3)
+  sleep(2)
   submit = d(className='android.widget.Button',
                      packageName='com.google.android.apps.village.boond',
                         resourceId='com.google.android.apps.village.boond:id/submit_button',
-                        text = 'Upload' ).click.wait()
+                        text = 'Upload' ).click()
 #Call The main Method
-n = 2
+n = 8000
 for i in range(n):
     crowdsource()
+    print(i)
 
 print("Your test is completed...")
 
