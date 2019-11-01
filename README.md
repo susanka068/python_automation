@@ -32,8 +32,18 @@ Before starting installation make sure your device has the following packages in
 
 INSTALLATION :
 Connect your Phone with your PC with an OTG cable.
-In order to install and Run this automation 'git clone' this repository and 'cd' into the directory then run 
+In order to install and Run this automation 'git clone' this repository
+
+git clone https://github.com/susanka068/python_automation.git
+
+and 'cd' into the directory
+
+cd python_automation
+
+open the image capture page in crowdsource app then run 
+
 python3 elpsycongroo.py
+
 The automation Process will start within few seconds actively point your camera with towards the things you want to click a picture of !
 Grab some popcorn and enjoy :)
 Saiyonara .
